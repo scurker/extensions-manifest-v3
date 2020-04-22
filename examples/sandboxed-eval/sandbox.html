@@ -1,0 +1,12 @@
+<script>
+  window.addEventListener('message', event => {
+    const { value } = event.data;
+    const { a, exec } = JSON.parse(value);
+    const fn = new Function(`return ${exec}`)();
+
+    event.source.postMessage({
+      result: fn(a)
+    }, '*');
+  });
+</script>
+@scurker

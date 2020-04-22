@@ -1,0 +1,13 @@
+{
+  "name": "Sandboxed Eval",
+  "manifest_version": 3,
+  "version": "1.2.3",
+  "devtools_page": "devtools.html",
+  "permissions": [],
+  "sandbox": {
+    "pages": ["sandbox.html"]
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
